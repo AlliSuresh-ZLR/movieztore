@@ -1,0 +1,21 @@
+.moviecontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: aqua;
+    /* padding: 215px; */
+}
+.emptycontainer{
+   width: 100%;
+   height: 100vh;
+   background: url("https://blog.expertrec.com/wp-content/uploads/2019/01/how-to-implement-search-in-website.jpg");
+   background-size: cover;
+}
+.card{
+    padding: 25px;
+    margin: 25px;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition-timing-function: ease-in-out;
+}
