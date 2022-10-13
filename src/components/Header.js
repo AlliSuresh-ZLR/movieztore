@@ -125,8 +125,10 @@ export default function Header() {
       </AppBar>
 
       <div className={data.length?"moviecontainer":"emptycontainer"} >
+        {}
 
-        {data.map((item,index) => <Moviecard key={index} url={item.i?item.i.imageUrl:"https://www.nbu.ac.in/img/dept/anthropology/slider/slider3.jpg"} />)}
+        {data.map((item,index) => <Moviecard key={index}title={item.l} url={item.i?item.i.imageUrl:"https://www.nbu.ac.in/img/dept/anthropology/slider/slider3.jpg"} />)}
+      
       </div>
 
     </Box>
