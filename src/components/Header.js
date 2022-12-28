@@ -10,9 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
 import Moviecard from './Moviecard';
-import CircularProgress from '@mui/material/CircularProgress';
 import './moviecard.css'
-import Loader from './Loader';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -63,7 +61,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function Header() {
   const [searchkey, setSearchkey] = React.useState("");
   const [data, setData] = React.useState([]);
-  const [loading,setLoading]=React.useState(false)
 
   
 
@@ -79,11 +76,10 @@ export default function Header() {
       }
     };
     if (e.key === "Enter") {
-setLoading(true)
+
       await axios.request(options).then(function (response) {
         console.log(response.data);
         setData(response.data.d);
-        setLoading(false)
 
       }).catch(function (error) {
         console.error(error);
@@ -129,8 +125,9 @@ setLoading(true)
       </AppBar>
 
       <div className={data.length?"moviecontainer":"emptycontainer"} >
+        {}
 
-        {!loading?data.map((item,index) => <Moviecard key={index}title={item.l} url={item.i?item.i.imageUrl:"https://www.nbu.ac.in/img/dept/anthropology/slider/slider3.jpg"} />):<Loader/>}
+        {data.map((item,index) => <Moviecard key={index}title={item.l} url={item.i?item.i.imageUrl:"https://www.nbu.ac.in/img/dept/anthropology/slider/slider3.jpg"} />)}
       
       </div>
 
