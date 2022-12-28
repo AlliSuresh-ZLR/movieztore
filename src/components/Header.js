@@ -12,6 +12,7 @@ import axios from 'axios';
 import Moviecard from './Moviecard';
 import CircularProgress from '@mui/material/CircularProgress';
 import './moviecard.css'
+import Loader from './Loader';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -129,7 +130,7 @@ setLoading(true)
 
       <div className={data.length?"moviecontainer":"emptycontainer"} >
 
-        {!loading?data.map((item,index) => <Moviecard key={index}title={item.l} url={item.i?item.i.imageUrl:"https://www.nbu.ac.in/img/dept/anthropology/slider/slider3.jpg"} />):<CircularProgress/>}
+        {!loading?data.map((item,index) => <Moviecard key={index}title={item.l} url={item.i?item.i.imageUrl:"https://www.nbu.ac.in/img/dept/anthropology/slider/slider3.jpg"} />):<Loader/>}
       
       </div>
 
