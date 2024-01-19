@@ -10,7 +10,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import axios from 'axios';
 import Moviecard from './Moviecard';
-import CircularProgress from '@mui/material/CircularProgress';
 import './moviecard.css'
 import Loader from './Loader';
 
