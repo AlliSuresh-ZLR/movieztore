@@ -7,7 +7,7 @@
 }
 .emptycontainer{
    width: 100%;
-   height: 100vh;
+   height: 1000px;
    background: url("https://blog.expertrec.com/wp-content/uploads/2019/01/how-to-implement-search-in-website.jpg");
    background-size: cover;
 }
