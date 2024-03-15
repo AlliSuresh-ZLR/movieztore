@@ -1,7 +1,12 @@
 .loader-div{
-    width: 100vw;
-    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translatex(-50,-50);
+    width: 20vw;
+    height: 150px;
     background-color: rgb(176, 210, 178);
     color: aliceblue;
+
     
 }
